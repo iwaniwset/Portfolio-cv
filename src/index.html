@@ -8,31 +8,879 @@
       src="https://kit.fontawesome.com/d14dbdbf5d.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;1,300;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <div
-      class="w-full h-screen bg-gradient-to-r from-blue-500 via-sky-500 to-emerald-500 background-animate"
+    <header
+      class="w-full h-2/3 sm:h-2/3 bg-gradient-to-r from-blue-500 via-emerald-400 to-sky-500 background-animate -z-50"
     >
-      <div class="relative w-full">
-        <img
-          src="../dist//img/profil.jpg"
-          class="absolute top-20 left-1/2 -translate-x-1/2 max-w-[17rem] rounded-full ring-8 ring-slate-300 drop-shadow-2xl shadow-2xl shadow-yellow-500"
-          alt=""
-        />
+      <div class="fixed top-3 w-full z-50">
         <div
-          class="absolute left-1/2 -z-0 flex flex-col -translate-x-1/2 top-96 mx-auto"
+          class="bg-white relative backdrop-blur-lg rounded-full sm:bg-yellow-400 md:bg-blue-400 lg:bg-pink-400 xl:bg-emerald-500 2xl:bg-amber-400 mx-auto flex justify-between w-[90%] h-14 drop-shadow-xl px-5 items-center"
         >
-          <div
-            class="relative backdrop-blur-md rounded-xl py-4 px-8 z-50 bg-transparent shadow-2xl drop-shadow-2xl"
-          >
-            <h5 class="text-lg text-center">👏 Hi! I am</h5>
-            <h4 class="text-3xl font-bold text-center">Iwan</h4>
+          <div class="">
+            <a
+              href="#"
+              class="text-md font-pacifisto font-extrabold cursor-pointer text-cyan-800"
+              >imSetiawan</a
+            >
           </div>
-          <div class="mt-5 w-full flex bg-amber-400">
-            <h1 class="text-2xl">Javascript Enthusiast</h1c>
+          <div class="hidden lg:block">
+            <ul class="flex gap-8 font-semibold cursor-pointer pr-5">
+              <li>
+                <a
+                  class="text-cyan-800 font-semibold hover:text-cyan-900 transition ease-in-out duration-500 font-pacifisto text-md"
+                  href=""
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-cyan-800 font-semibold hover:text-cyan-900 transition ease-in-out duration-500 font-pacifisto text-md"
+                  href=""
+                >
+                  Resource
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-cyan-800 font-semibold hover:text-cyan-900 transition ease-in-out duration-500 font-pacifisto text-md"
+                  href=""
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-cyan-800 font-semibold hover:text-cyan-900 transition ease-in-out duration-500 font-pacifisto text-md"
+                  href=""
+                >
+                  Works
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            id="buttonNav"
+            class="text-cyan-800 text-lg lg:hidden font-bold cursor-pointer"
+          >
+            <button><i class="fa-solid fa-bars"></i></button>
+          </div>
+
+          <div
+            id="navMobile"
+            class="absolute top-16 bg-white drop-shadow-none transition ease-in duration-500 left-0 w-full rounded-xl hidden"
+          >
+            <ul class="gap-8 font-semibold cursor-pointer text-center">
+              <li class="pt-10 pb-5 px-4 text-xl">
+                <a
+                  class="text-cyan-600 hover:text-cyan-900 transition ease-in-out duration-500"
+                  href=""
+                >
+                  About
+                </a>
+              </li>
+              <li class="py-5 px-4 text-xl">
+                <a
+                  class="text-cyan-600 hover:text-cyan-900 transition ease-in-out duration-500"
+                  href=""
+                >
+                  Resource
+                </a>
+              </li>
+              <li class="py-5 px-4 text-xl">
+                <a
+                  class="text-cyan-600 hover:text-cyan-900 transition ease-in-out duration-500"
+                  href=""
+                >
+                  Blog
+                </a>
+              </li>
+              <li class="pt-5 pb-10 px-4 text-xl">
+                <a
+                  class="text-cyan-600 hover:text-cyan-900 transition ease-in-out duration-500"
+                  href=""
+                >
+                  Works
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+      <div
+        id="hero"
+        class="relative w-full mx-auto max-w-md sm:max-w-lg top-28 sm:top-24"
+      >
+        <div
+          class="absolute top-0 mix-blend-multiply left-14 sm:left-20 bg-cyan-400 w-56 h-56 sm:w-64 sm:h-64 rounded-full filter blur-xl opacity-80"
+        ></div>
+        <div
+          class="absolute top-0 mix-blend-multiply right-14 sm:right-20 bg-sky-400 w-56 h-56 sm:w-64 sm:h-64 rounded-full filter blur-xl opacity-80"
+        ></div>
+        <div class="relative top-5 w-full h-full container max-w-md">
+          <img
+            src="../dist//img/profil.jpg"
+            class="relative mx-auto max-w-[17rem] md:max-w-sm rounded-full ring-8 ring-slate-300 drop-shadow-2xl shadow-2xl shadow-yellow-500"
+            alt=""
+          />
+          <div
+            class="w-40 md:w-72 md:animate-bounce ease-in-out mx-auto mt-5 gap-2 bg-white bg-opacity-70 backdrop-blur-sm py-2 px-3 rounded-md shadow-sm"
+          >
+            <h1
+              class="font-courier md:text-xl text-xs text-center font-bold text-slate-800 mt-2"
+            >
+              Hy! iam
+            </h1>
+            <h1
+              class="text-center text-base md:text-2xl font-bold font-courier"
+            >
+              Iwan Setiawan
+            </h1>
+          </div>
+          <div
+            class="w-52 absolute top-10 -left-32 animate-bounce hidden mx-auto md:flex justify-center items-center mt-5 bg-white bg-opacity-70 backdrop-blur-sm py-2 px-3 rounded-md shadow-sm"
+          >
+            <img src="../dist/img/developer.png" class="w-7 h-7" alt="" />
+            <h1
+              class="font-courier text-xl font-bold text-slate-800 text-center"
+            >
+              Fullstack Javascript
+            </h1>
+          </div>
+          <div
+            class="w-44 absolute -right-24 hidden top-0 animate-bounce mx-auto md:flex justify-center items-center bg-white bg-opacity-70 backdrop-blur-sm py-2 px-3 rounded-md shadow-sm"
+          >
+            <img src="../dist/img/developer.png" class="w-7 h-7" alt="" />
+            <h1
+              class="font-courier text-xl text-center font-bold text-slate-800"
+            >
+              Digital Nomaden
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="w-full max-w-md md:max-w-2xl mt-36 mx-auto">
+        <h1
+          class="text-center w-full font-courier font-bold text-[1.6rem] sm:text-4xl text-shadow-md text-amber-200 p-1 md:text-5xl"
+        >
+          Fullstack Javascript Enthusiast
+        </h1>
+        <h2
+          class="font-courier text-center font-bold sm:text-lg md:text-2xl text-slate-50 pb-5"
+        >
+          Based in Cilacap, Central Of Java
+        </h2>
+      </div>
+    </header>
+
+    <!-- About Section Start -->
+    <div
+      class="w-full bg-[#172554] py-6 px-4 mx-auto font-courier font-bold text-slate-50 italic"
+    >
+      <h1 class="text-center text-xl tracking-wider md:text-2xl">
+        "Im Software Developer with background knowledge in College and
+        immersive Fullstack Javascript Bootcamp"
+      </h1>
     </div>
+    <!-- About Section  End-->
+
+    <!-- what do i do Start  -->
+    <div class="w-full mx-auto bg-slate-50">
+      <h1
+        class="text-center pt-7 pb-4 font-courier text-4xl text-cyan-800 font-bold tracking-wider"
+      >
+        My Service
+      </h1>
+      <h3 class="text-center font-courier px-5 text-slate-500 font-bold mb-5">
+        Best place to boost your bussiness
+      </h3>
+      <div
+        class="w-full mx-auto flex flex-col md:flex-row md:gap-2 gap-5 md:pb-14 pb-28 p-2"
+      >
+        <div
+          class="w-full sm:max-w-lg sm:p-8 max-w-sm mx-auto shadow-md rounded-md bg-white p-5 bg-opacity-30 backdrop-blur-lg"
+        >
+          <h1
+            class="font-courier font-semibold text-2xl sm:text-3xl text-slate-800"
+          >
+            <span
+              ><img
+                src="../dist/img/coding.png"
+                class="w-9 h-9 mb-2 sm:mb-4"
+                alt=""
+            /></span>
+            Web Developer
+          </h1>
+          <p class="text-slate-400 leading-relaxed sm:text-lg">
+            A great knowledge of HTML / CSS, Javascript and React.js. I make
+            responsive applications with Tailwind with interactive UI's designs.
+          </p>
+        </div>
+        <div
+          class="w-full sm:max-w-lg sm:p-8 max-w-sm mx-auto shadow-md rounded-md bg-white p-5 bg-opacity-30 backdrop-blur-lg"
+        >
+          <h1
+            class="font-courier font-semibold text-2xl sm:text-3xl text-slate-800"
+          >
+            <span
+              ><img
+                src="../dist/img/graphic-designer.png"
+                class="w-9 h-9 mb-2 sm:mb-4"
+                alt=""
+            /></span>
+            Graphic Design
+          </h1>
+          <p class="text-slate-400 leading-relaxed sm:text-lg">
+            A love for design and a good eye for creativity. I have 3 years
+            experience designing flyer, banner, id card and much more.
+          </p>
+        </div>
+        <div
+          class="w-full sm:max-w-lg sm:p-8 max-w-sm mx-auto shadow-md rounded-md bg-white p-5 bg-opacity-30 backdrop-blur-lg"
+        >
+          <h1
+            class="font-courier font-semibold text-2xl sm:text-3xl text-slate-800"
+          >
+            <span
+              ><img
+                src="../dist/img/book.png"
+                class="w-10 h-10 mb-2 sm:mb-4"
+                alt=""
+            /></span>
+            Coding Educator
+          </h1>
+          <p class="text-slate-400 leading-relaxed sm:text-lg">
+            I have been working as coding educator since 2022, i teach children
+            how to code using blockbase website.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- what do i do end  -->
+
+    <!-- Free Course Start  -->
+    <div class="w-full mx-auto">
+      <h1
+        class="text-center pt-7 pb-4 font-courier text-4xl text-cyan-800 font-bold tracking-wider"
+      >
+        Free Course
+      </h1>
+      <p class="text-center font-courier px-5 text-slate-500 font-bold mb-5">
+        pick up our free course as much as you can
+      </p>
+      <div class="grid px-2 gap-2 md:gap-4 pb-12 md:grid-cols-2">
+        <div
+          class="bg-yellow-400 00 aspect-[4/3] rounded-lg flex md:aspect-[3/4] justify-center cursor-pointer overflow-hidden shadow-xl relative hover:scale-95 transition-all duration-700;"
+        >
+          <img
+            src="../dist/img/java-script.png"
+            class="w-40 h-40 self-center absolute top-10"
+            alt=""
+          />
+          <h1
+            class="font-courier text-center font-semibold text-4xl text-slate-800 absolute top-56"
+          >
+            Primitive Data Type
+          </h1>
+          <p
+            class="text-center p-5 font-courier font-bold text-slate-600 absolute top-64"
+          >
+            this course will teach you about string, number, boolean, undefined,
+            not define and null
+          </p>
+        </div>
+        <div
+          class="bg-yellow-400 00 aspect-[4/3] rounded-lg flex md:aspect-[3/4] justify-center cursor-pointer overflow-hidden shadow-xl relative hover:scale-95 transition-all duration-700;"
+        >
+          <img
+            src="../dist/img/java-script.png"
+            class="w-40 h-40 self-center absolute top-10"
+            alt=""
+          />
+          <h1
+            class="font-courier text-center font-semibold text-4xl text-slate-800 absolute top-56"
+          >
+            Structure Data Type
+          </h1>
+          <p
+            class="text-center p-5 font-courier font-bold text-slate-600 absolute top-64"
+          >
+            this course will teach you Array and Object. how to manipulate both
+            of them.
+          </p>
+        </div>
+        <div
+          class="bg-green-500 00 aspect-[4/3] rounded-lg flex md:aspect-[3/4] justify-center cursor-pointer overflow-hidden shadow-xl relative hover:scale-95 transition-all duration-700;"
+        >
+          <img
+            src="../dist/img/nodejs-1-logo-png-transparent.png"
+            class="w-40 self-center absolute top-20"
+            alt=""
+          />
+          <h1
+            class="font-courier font-semibold text-center text-4xl text-slate-50 absolute top-48"
+          >
+            CRUD using Terminal
+          </h1>
+          <p
+            class="text-center p-5 font-courier font-bold text-slate-800 absolute top-56"
+          >
+            this course will teach you about string, number, boolean, undefined,
+            not define and null
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Free Course End  -->
+
+    <!-- Free Resources Start  -->
+    <div class="w-full mx-auto">
+      <h1
+        class="text-center pt-7 pb-4 font-courier text-4xl text-cyan-800 font-bold tracking-wider"
+      >
+        Free Resources
+      </h1>
+      <p class="text-center font-courier px-5 text-slate-500 font-bold mb-5">
+        you can download our design for free
+      </p>
+      <div class="grid px-2 gap-2 pb-12">
+        <div class="bg-blue-500 aspect-[4/3] rounded-md shadow-md"></div>
+        <div class="bg-blue-500 aspect-[4/3] rounded-md shadow-md"></div>
+        <div class="bg-blue-500 aspect-[4/3] rounded-md shadow-md"></div>
+      </div>
+    </div>
+    <!-- Free Resources End  -->
+
+    <!-- Offering Start  -->
+    <div class="w-full mx-auto">
+      <h1
+        class="text-center pt-7 pb-4 font-courier px-2 text-4xl text-cyan-800 font-bold tracking-wider"
+      >
+        Wanna be Programmer??
+      </h1>
+      <p class="text-center font-courier px-5 text-slate-500 font-bold">
+        12 Weeks Become Fullstack Javascript
+      </p>
+      <p class="text-center font-courier px-5 text-slate-500 font-bold mb-5">
+        You can just take class per month
+      </p>
+      <div class="grid px-2 gap-2 pb-12 mx-auto">
+        <div
+          class="w-full max-w-sm mx-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+        >
+          <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
+            Standard plan
+          </h5>
+          <div class="flex items-baseline text-gray-900 dark:text-white">
+            <span class="text-3xl font-semibold">$</span>
+            <span class="text-5xl font-extrabold tracking-tight">49</span>
+            <span
+              class="ml-1 text-xl font-normal text-gray-500 dark:text-gray-400"
+              >/month</span
+            >
+          </div>
+          <!-- List -->
+          <ul role="list" class="space-y-5 my-7">
+            <li class="flex space-x-3">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+                >2 team members</span
+              >
+            </li>
+            <li class="flex space-x-3">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+                >20GB Cloud storage</span
+              >
+            </li>
+            <li class="flex space-x-3">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+                >Integration help</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >Sketch Files</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >API Access</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >Complete documentation</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >24×7 phone & email support</span
+              >
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+          >
+            Choose plan
+          </button>
+        </div>
+        <div
+          class="w-full max-w-sm mx-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+        >
+          <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
+            Standard plan
+          </h5>
+          <div class="flex items-baseline text-gray-900 dark:text-white">
+            <span class="text-3xl font-semibold">$</span>
+            <span class="text-5xl font-extrabold tracking-tight">49</span>
+            <span
+              class="ml-1 text-xl font-normal text-gray-500 dark:text-gray-400"
+              >/month</span
+            >
+          </div>
+          <!-- List -->
+          <ul role="list" class="space-y-5 my-7">
+            <li class="flex space-x-3">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+                >2 team members</span
+              >
+            </li>
+            <li class="flex space-x-3">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+                >20GB Cloud storage</span
+              >
+            </li>
+            <li class="flex space-x-3">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+                >Integration help</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >Sketch Files</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >API Access</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >Complete documentation</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >24×7 phone & email support</span
+              >
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+          >
+            Choose plan
+          </button>
+        </div>
+        <div
+          class="w-full max-w-sm mx-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+        >
+          <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
+            Standard plan
+          </h5>
+          <div class="flex items-baseline text-gray-900 dark:text-white">
+            <span class="text-3xl font-semibold">$</span>
+            <span class="text-5xl font-extrabold tracking-tight">49</span>
+            <span
+              class="ml-1 text-xl font-normal text-gray-500 dark:text-gray-400"
+              >/month</span
+            >
+          </div>
+          <!-- List -->
+          <ul role="list" class="space-y-5 my-7">
+            <li class="flex space-x-3">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+                >2 team members</span
+              >
+            </li>
+            <li class="flex space-x-3">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+                >20GB Cloud storage</span
+              >
+            </li>
+            <li class="flex space-x-3">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span
+                class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+                >Integration help</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >Sketch Files</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >API Access</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >Complete documentation</span
+              >
+            </li>
+            <li class="flex space-x-3 line-through decoration-gray-500">
+              <!-- Icon -->
+              <svg
+                aria-hidden="true"
+                class="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Check icon</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-base font-normal leading-tight text-gray-500"
+                >24×7 phone & email support</span
+              >
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+          >
+            Choose plan
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Offering Ends  -->
+
+    <!-- Accordion Start  -->
+
+    <!-- Accordion Ends  -->
   </body>
 </html>

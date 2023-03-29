@@ -22,7 +22,19 @@ module.exports = {
       "2xl": "1400px",
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
+      animation: {
+        "bounce-slow": "bounce 3s ease linear infinite",
+      },
+      fontFamily: {
+        courier: "Courier Prime",
+        pacifisto: "Pacifico",
+        barlow: "Barlow Condensed",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-textshadow")],
 };
