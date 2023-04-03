@@ -896,10 +896,6 @@ video {
   --tw-bg-opacity: 0.3;
 }
 
-.bg-\[url\(\"\.\/dist\/img\/calculator\.jpg\"\)\] {
-  background-image: url("./dist/img/calculator.jpg");
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
